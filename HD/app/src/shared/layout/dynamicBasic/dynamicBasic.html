@@ -1,0 +1,27 @@
+<!-- This Is Dynamic Basic have the folowing propertys
+1 . Header
+2 . NavBar
+3 . Main Content
+4 . Footer
+5 . Left side Bar
+6 . Right Side Bar ??
+-->
+
+<span ng-controller="dynamicBasicCntrl"  >
+<div  .md-whiteframe-8dp ng-include="'./src/shared/components/header/basicHeader.html'"></div>
+
+    <main layout="row"  style = "min-height: 400px ; background: #f5f5f5">
+    <md-sidenav md-component-id ='sideNav' flex="10"  layout="column" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" style="background: #ff8614 ; min-width: 200px  " >
+        <div>Side Navigation</div>
+    </md-sidenav>
+    <div flex = "90"  layout="column"  >
+        <div  layout="row " ng-view ></div>
+        </div >
+
+    </main>
+
+ <div  layout="row" flex = "100" style = "min-height: 100px ;background: #323232" ></div>
+</span>
+
+<!-- coment Out
+-->

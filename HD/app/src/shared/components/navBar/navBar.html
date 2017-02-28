@@ -1,0 +1,25 @@
+<div ng-controller="AppCtrl" ng-cloak>
+    <md-content class="md-padding"   style="background: #ffffff ">
+        <md-nav-bar
+                md-selected-nav-item="currentNavItem"
+                nav-bar-aria-label="navigation links">
+            <div layout="column" layout-gt-xs="row" flex = "100" >
+                    <div   layout = "row"  flex >
+                        <md-nav-item md-nav-href="#!/page1" name="Home" >
+                            <md-icon md-svg-src=" ./src/assets/img/icons/ic_home_black_36px.svg" aria-label="Close dialog"></md-icon>
+                            Home
+                        </md-nav-item>
+                    </div>
+                    <div  layout = "row"  flex >
+                        <md-nav-item md-nav-href="#!/page3" name="Currency Converter">
+                            <md-icon md-svg-src="./src/assets/img/icons/ic_find_replace_black_36px.svg" aria-label="Close dialog"></md-icon>
+                           Converter
+                        </md-nav-item>
+                    </div>
+                </div>
+        </md-nav-bar>
+        <div class="ext-content">
+        </div>
+    </md-content>
+</div>
+

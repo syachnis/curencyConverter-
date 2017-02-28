@@ -1,0 +1,44 @@
+<div   layout = "column"  flex = 80    layout-fill layout-padding  layout-margin style = "  min-width: 400px ; ">
+    <div class="md-whiteframe-1dp" style = "background: #ffffff" >
+        <h2 layout = "row" flex = 50  style = "min-width: 400px ;  opacity: 0.5;"> Currency  Converter </h2>
+        <br>
+
+<div layout = "row" flex = 100 >
+        <md-input-container layout = "column"  flex = 60 class="md-icon-float md-icon-right md-block">
+            <label>Type in amount and select currency</label>
+
+            <input ng-model="base" type="number" step="0.01" ng-change="convertCurrency()">
+
+        </md-input-container>
+
+    <md-input-container layout = "column"  flex = 30>
+        <label>Currency</label>
+            <md-select ng-model="selectedCurrency" ng-init="selectedCurrency = currencys[0]" ng-change="updateBaseToUSD()" >
+                <md-option ng-value="currency" ng-repeat="currency in currencys">{{ currency.name }}</md-option>
+            </md-select>
+    </md-input-container>
+</div>
+
+        <div layout = "row" flex = 100 >
+            <md-input-container layout = "column"  flex = 60 class="md-icon-float md-icon-right md-block">
+                <label>Converted amount</label>
+
+                <input ng-model="result" type="number" step="0.01" ng-change="unConvertCurrency()">
+            </md-input-container>
+            <md-input-container layout = "column"  flex = 30>
+                <label>Currency</label>
+
+                <md-select ng-init="selectedResCurrency = currencys[1]" ng-change="updateUSDToRes()" ng-model="selectedResCurrency" >
+                    <md-option ng-value="currency" ng-repeat="currency in currencys">{{ currency.name }}</md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+
+        <div layout ="row" flex=100 layout-align="end end">
+            <md-button  md-no-ink class="md-primary" ng-click="disclaimer($event)" > Disclaimer </md-button>
+        </div>
+
+
+</div>
+</div>
+</div>
