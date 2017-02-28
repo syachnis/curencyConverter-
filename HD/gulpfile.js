@@ -4,7 +4,26 @@
 var gulp = require('gulp');
 var wiredep = require('wiredep').stream;
 var inject = require('gulp-inject');
+var serve = require('gulp-serve');
+
 var scripts = ['bower' , 'index'];
+
+var webserver = require('gulp-webserver');
+
+gulp.task('webserver', function() {
+    gulp.src('app')
+        .pipe(webserver({
+            livereload: true,
+            directoryListing: true,
+            open: true
+        }));
+});
+
+
+
+gulp.task('serve', serve('app'));
+
+
 
 gulp.task('default' , scripts);
 
