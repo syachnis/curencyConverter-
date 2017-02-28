@@ -1,0 +1,9 @@
+To run application Choose one of 3 ways :
+
+1 . Open  ./HD/app/index.html  in browser . (some browsers block local file Access it worked for me in Firefox  ).
+
+2 . In Web Storm Right click on ./HD/app/index.html and select open in Browser .
+
+3 . a) In Terminal install gulp and node/npm globally on your machine.
+    b) use command : gulp serve
+    C) open Browser url :  http://127.0.0.1:3000
